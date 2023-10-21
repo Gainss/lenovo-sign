@@ -22,6 +22,10 @@ agentid = ""
 # 钉钉推送
 access_token = ""
 
+[message_push.Pushplus_message]
+#Pushplus推送
+push_token = ""
+
 [message_push.Email_message]
 # smtp邮件推送
 # 发送者邮箱
