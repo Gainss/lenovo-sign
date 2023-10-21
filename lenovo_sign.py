@@ -112,6 +112,16 @@ class Push_messages:
                 print('send email error', e)
                 return False
 
+    class Pushplus_message:
+        def __init__(self, push_token: str) -> None:
+            self.push_token = push_token
+
+        def send_message(self, content: str) -> bool:
+            title =  '联想签到'
+            content = content
+            url = 'http://www.pushplus.plus/send?token=' + self.push_token + '&title=' + title + '&content=' + content + '&template=html'
+            requests.get(url)
+
 
 def set_push_type():
     for type, key in config.get("message_push").items():
